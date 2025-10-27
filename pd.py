@@ -1,4 +1,4 @@
-def DPMSS(A):
+def DPMSS(A): #tabulacion
     n = len(A)
     MSS = [[0] * n for _ in range(n)]  # matriz n×n inicializada en 0
 
@@ -25,7 +25,7 @@ def DPMSS(A):
 
     return MSS[0][n - 1]
 
-def MSS(A, memo=None):
+def MSS(A, memo=None): #memoizacion
     if memo is None:
         memo = {}
 
@@ -47,4 +47,5 @@ def MSS(A, memo=None):
 
 A=[5,2,-1,-7, 9,-2,4,5,2,-1,-7, 9,-2,4,5,2,-1,-7, 9,-2,4,5,2,-1,-7, 9,-2,4,5,2,-1,-7, 9,-2,4]
 print(DPMSS(A))
+
 print(MSS(A))
